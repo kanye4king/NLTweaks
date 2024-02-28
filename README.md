@@ -1,5 +1,5 @@
 # NLTweaks
-A handful of tweaks to NetLimtier v4.1.13.0
+A handful of tweaks to NetLimiter v4.1.13.0
 
 Drag and drop installations (should) only work with v4.1.13.0, but short copy+paste tutorials will be added below using [dnSpy.exe](https://github.com/dnSpy/dnSpy):
 
