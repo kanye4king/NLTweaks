@@ -62,7 +62,86 @@ Drag and drop installations (should) only work with v4.1.13.0, but short copy+pa
 		}
 ```
 # Sound Effects on Hotkey Press
-	1. hello
+
+1. Open NLClientApp.Core
+
+    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/ee3234a6-2879-47ce-b723-df39ca205ee4)
+
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/8e6ec2e8-df03-4b86-a91b-5bd284b04ca9)
+
+2. Navigate to NLClientApp.Core > NlClientApp.Core.dll > NLClientApp.Core > OnMessage
+
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/783c99d2-6681-46c3-ac5a-f673999d4968)
+
+3. Replace the OnMessage() function with the following code
+
+```
+public bool OnMessage(int msg, IntPtr wParam, IntPtr lParam)
+{
+	if (MainVM.Current.ActiveClient == null)
+	{
+		return false;
+	}
+	if (msg == 786)
+	{
+		int num = wParam.ToInt32();
+		if (num >= 61441 && num < 61441 + this.HKIdToRuleId.Count)
+		{
+			try
+			{
+				Tuple<HotKey, List<string>> tuple = this.HKIdToRuleId[num - 61441];
+				List<Rule> list = new List<Rule>();
+				foreach (string b in tuple.Item2)
+				{
+					foreach (RuleVM ruleVM in MainVM.Current.ActiveClient.Rules)
+					{
+						if (ruleVM.Model.Id == b)
+						{
+							ruleVM.IsEnabled = !ruleVM.IsEnabled;
+							list.Add(ruleVM.Model);
+							foreach (FilterVM filter in MainVM.Current.ActiveClient.Filters)
+							{
+								if (ruleVM.Model.FilterId == filter.Model.Id)
+								{
+									try
+									{
+										using (SoundPlayer player = new SoundPlayer(Path.Combine(Directory.GetCurrentDirectory(), filter.Name) + ruleVM.IsEnabled.ToString() + ".wav"))
+										{
+											player.Play();
+										}
+									}
+									catch
+									{
+									}
+								}
+							}
+						}
+					}
+				}
+				foreach (Rule rule in list)
+				{
+					MainVM.Current.ActiveClient.Model.UpdateRule(rule);
+				}
+				return true;
+			}
+			catch (Exception ex)
+			{
+				UIHelper.ShowError(Application.Current.MainWindow, ex.Message);
+			}
+			return false;
+		}
+	}
+	return false;
+}
+```
+4. Drag sound effects into the NetLimiter directory, name them in the following structure: 
+"{Filter Name}{true/false}.wav"
+![image](https://github.com/kanye4king/NLTweaks/assets/124884528/2858a8f2-44eb-4ceb-ab18-00325744e183)
+Where true is the sound to play when the rule is ENABLED, and false is the sound to play when the rule is DISABLED
+Please ensure that files are in the .wav format
+
+
+    
    
   
 
