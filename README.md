@@ -15,14 +15,53 @@ Drag and drop installations (should) only work with v4.1.13.0, but short copy+pa
    5. Replace the StackPanel_KeyDown function with the following code
    
   ```
-private void StackPanel_KeyDown(object sender, KeyEventArgs e)
-   {
-     	this.Key = e.Key;
-     	this.ModifierKeys = Keyboard.Modifiers;
-     	this.BtnSet.IsEnabled = true;
-     	this.SetComponents();
-  }
+   private void StackPanel_KeyDown(object sender, KeyEventArgs e)
+      {
+        	this.Key = e.Key;
+        	this.ModifierKeys = Keyboard.Modifiers;
+        	this.BtnSet.IsEnabled = true;
+        	this.SetComponents();
+     }
 ```
+   (Everything from here on is optional to get rid of "None + {HotKey}")
+
+   6. Replace the SetComponents function with the following code (it should be two function above the StackPanel_KeyDown function in the same file)
+```
+      private void SetComponents()
+		{
+			if (this.Key == Key.None)
+			{
+				this.BtnDelete.IsEnabled = false;
+				return;
+			}
+			if (this.ModifierKeys.ToString() == "None")
+			{
+				this.TxtBlock.Text = this.Key.ToString();
+			}
+			else
+			{
+				this.TxtBlock.Text = this.ModifierKeys.ToString() + "+" + this.Key.ToString();
+			}
+			this.BtnDelete.IsEnabled = true;
+		}
+```
+   8. Navigate to NLClientApp.Core > HotKey
+
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/f308ff14-3dad-4a64-8b05-125ac21458f3)
+
+   9. Replace the ToString() ovveride with the following code
+  ```
+      public override string ToString()
+		{
+			if (this.ModifierKeys.ToString() == "None")
+			{
+				return this.Key.ToString();
+			}
+			return this.ModifierKeys.ToString() + "+" + this.Key.ToString();
+		}
+  ```
+
+   
   
 
 
