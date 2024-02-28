@@ -3,7 +3,7 @@ A handful of tweaks to NetLimiter v4.1.13.0
 
 Drag and drop installations (should) only work with v4.1.13.0, but short copy+paste tutorials will be added below using [dnSpy.exe](https://github.com/dnSpy/dnSpy):
 
-1. Removing enforced modifier hotkeys
+# Removing Enforced Modifier Keys
    1. Open NLClientApp.Core and NLClientApp.Modules in dnSpy
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/ee3234a6-2879-47ce-b723-df39ca205ee4)
 
