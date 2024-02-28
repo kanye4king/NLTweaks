@@ -10,7 +10,6 @@ Drag and drop installations (should) only work with v4.1.13.0, but short copy+pa
    2. Navigate to NLClientApp.Modules > NLCLientApp.Modules.HotkeySelector > StackPanel_KeyDown
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/f1d8f664-3b93-41fb-8315-348df18c6242)
    3. Replace the StackPanel_KeyDown function with the following code
-   ```
    private void StackPanel_KeyDown(object sender, KeyEventArgs e)
   {
   	this.Key = e.Key;
@@ -18,7 +17,6 @@ Drag and drop installations (should) only work with v4.1.13.0, but short copy+pa
   	this.BtnSet.IsEnabled = true;
   	this.SetComponents();
   }
-```
   
 
 
