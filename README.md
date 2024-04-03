@@ -1,6 +1,16 @@
 # NLTweaks
 A handful of tweaks to NetLimiter v4.1.13.0
-More Tweaks will be added over time!
+
+# Features:
+1. Smooth Animated RGB Accents, toggleable on and off (REQUIRES NL RESTART)
+2. Dynamic App Name Changing for my paranoid d2 cheaters
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/8adad3dd-2e6a-41a0-9134-fa6363f45c6f)
+
+4. Custom Sound Files on Limit Enable/Disable
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/c000e142-15c7-4972-9198-c751eca95c97)
+
+6. Removing Modifier Keys from HotKeys
+![image](https://github.com/kanye4king/NLTweaks/assets/124884528/50843c86-5aab-421c-add4-d7bd5fad0f70)
 
 Drag and drop installations (should) only work with v4.1.13.0, but short copy+paste tutorials will be added below using [dnSpy.exe](https://github.com/dnSpy/dnSpy):
 
