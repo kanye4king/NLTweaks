@@ -22,13 +22,14 @@ See all features [here](https://www.youtube.com/watch?v=Bl-sOgZr5i4) or read the
 ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/50843c86-5aab-421c-add4-d7bd5fad0f70)
 
 5. Custom Sound Effects on Hotkey Toggle (only supports PCM encoded .wav files)
-   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/03ccf1ee-8c78-4741-b033-e88672c7efa3)
+  To set up, just drag .wav files into your NL directory, and name them in the following format: "{filter_name}{on/off}.wav" as seen below
+   ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/8792ea23-60f6-4f14-a09d-74c03a179dcb)
 
-6. Hotkey Timer Overlay (Supports animated and static accent colours from main NL App)
+7. Hotkey Timer Overlay (Supports animated and static accent colours from main NL App)
   i. This comes with built in colour coding for 7500 limits, regardless of what the filter is named, any filter that targets port 7500 will turn yellow until you're desynced enough to swap weapons, white while its safe to limit and do damage, and turn red when you run risk of disconnecting.
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/c2478c15-998f-4e9e-91c7-e848c34c25fd)
    
-7. Can be launched either before or after opening D2 without triggering BattlEye
+8. Can be launched either before or after opening D2 without triggering BattlEye
    
-8. Comes with an infinite trial period license (All Features)
+9. Comes with an infinite trial period license (All Features)
 
