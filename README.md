@@ -3,6 +3,7 @@ A handful of tweaks to NetLimiter v4.1.13.0
 
 # Installation:
 - Simply download the DLL files, close NetLimiter and drag and drop them into your NL Directory
+- All features are completely native to NL and this doesn't require any additional exe's to run, just replace dll's one time
 
 # Features:
 See all features [here](https://www.youtube.com/watch?v=Bl-sOgZr5i4) or read them below:
