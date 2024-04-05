@@ -1,7 +1,11 @@
 # NLTweaks
 A handful of tweaks to NetLimiter v4.1.13.0
 
+# Installation:
+- Simply download the DLL files, close NetLimiter and drag and drop them into your NL Directory
+
 # Features:
+See all features [here](https://www.youtube.com/watch?v=Bl-sOgZr5i4) or read them below:
 1. Smooth Animated RGB Accents, toggleable on and off, and rate-adjustable
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/6d697b8c-65ff-4f05-bd5d-8f0f22d6b963)
 
@@ -18,5 +22,10 @@ A handful of tweaks to NetLimiter v4.1.13.0
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/03ccf1ee-8c78-4741-b033-e88672c7efa3)
 
 6. Hotkey Timer Overlay (Supports animated and static accent colours from main NL App)
+  i. This comes with built in colour coding for 7500 limits, regardless of what the filter is named, any filter that targets port 7500 will turn yellow until you're desynced enough to swap weapons, white while its safe to limit and do damage, and turn red when you run risk of disconnecting.
    ![image](https://github.com/kanye4king/NLTweaks/assets/124884528/c2478c15-998f-4e9e-91c7-e848c34c25fd)
+   
+7. Can be launched either before or after opening D2 without triggering BattlEye
+   
+8. Comes with an infinite trial period license (All Features)
 
