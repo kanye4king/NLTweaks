@@ -5,7 +5,7 @@ A handful of tweaks to NetLimiter v4.1.13.0
 - Open a command prompt as administrator, type `net stop nlsvc` and press enter
 - Simply download the DLL files, close NetLimiter and drag and drop them into your NL Directory
 - All features are completely native to NL and this doesn't require any additional exe's to run, just replace dll's one time
-- Rename the `NLClient.exe` executable to anything you like, but it NEEDs to be renamed to work for D2
+- Rename the `NLClientApp.exe` executable to anything you like, but it NEEDs to be renamed to work for D2
 
 # Features:
 See all features [here](https://www.youtube.com/watch?v=Bl-sOgZr5i4) or read them below:
